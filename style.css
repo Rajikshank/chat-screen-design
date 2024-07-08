@@ -2,12 +2,14 @@ body {
   font-family: "Inter", sans-serif;
   margin: 0;
   display: flex;
-  height: 100vh;
+ /** height: 100vh;**/
   background-color: #f8f9fc;
   color: #333;
+
 }
 .sidebar {
   width: 250px;
+  
   background-color: #f8f8f8;
   padding: 20px;
   box-shadow: 10px 0 10px -5px rgba(0, 0, 0, 0.1);
@@ -80,7 +82,7 @@ body {
 }
 .sidebar .user-profile img {
   width: 40px;
-  height: 40px;
+  height: 100%;
   border-radius: 50%;
   margin-right: 10px;
 }
@@ -91,17 +93,28 @@ body {
   flex-grow: 1;
   /** background-color: #333;**/
   display: flex;
+   
   flex-direction: column;
-  justify-content: center;
+  flex-wrap: wrap;
   gap: 1pt;
 }
 .content {
   align-items: center;
   /** background-color: #6a3eb8;**/
   flex-grow: 0.9;
+ 
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.content-column{
+  
+  display: flex;
+  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .bottom-container {
   border-radius: 8px;
@@ -123,8 +136,13 @@ body {
   justify-content: flex-end;
 }
 .greeting-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 .greeting {
+  text-wrap-mode: wrap;
+  text-wrap: pretty;
   font-size: 48px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -137,11 +155,16 @@ body {
   gap: 10px;
 }
 .chat-content {
-  overflow-y: auto;
+
+  
+
+ 
+ 
   margin-bottom: 10px;
 }
 .chat-categories {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 15px;
@@ -149,6 +172,7 @@ body {
 }
 
 .food-categories {
+  flex-wrap: wrap;
   height: fit-content;
   border: 2px solid #e2e2e2;
   border-radius: 20px;
@@ -159,6 +183,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .horizontal-scroll {
   display: flex;
   align-items: center;
@@ -166,12 +191,14 @@ body {
   gap: 10px;
   margin-bottom: 40px;
 }
+
 .bar {
   border-radius: 10px;
   width: 30px;
   padding: 1px;
   background-color: #9f99a5;
 }
+
 .bar-selected {
   border-radius: 10px;
   width: 30px;
@@ -180,7 +207,8 @@ body {
 }
 .chat-category {
   padding: 20px;
-  height: fit-content;
+  flex-wrap: wrap;
+
   border: 1px solid #e2e2e2;
   border-radius: 20px;
   background-color: #ffffff;
@@ -195,7 +223,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  width: 50%;
+width: 100%;
 }
 
 .chat-input-box {
